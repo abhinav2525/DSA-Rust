@@ -2,6 +2,7 @@ mod test;
 mod duplicates;
 mod anagram;
 mod twosum;
+mod groupanagram;
 #[derive(Debug)]
 struct Items {
     count: i32,
@@ -24,7 +25,11 @@ fn main() {
     println!("{}", result);
 
     let result = twosum::twosum([0,7,11,15,2].to_vec(), 9);
-    println!("{:?}",result)
+    println!("{:?}",result);
+    
+    let input = vec![String::from("eat"),String::from("tea"),String::from("tan"),String::from("ate"),String::from("nat"),String::from("bat")];
+    let result = groupanagram::group_anagrams(input);
+    println!("{:?}",result);
    
 }
 
