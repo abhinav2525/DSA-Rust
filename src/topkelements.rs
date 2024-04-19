@@ -8,8 +8,7 @@ pub fn top_k_frequent(nums: Vec<i32>, k: i32) -> Vec<i32> {
         *freq.entry(num).or_insert(0)+=1;
     }
     
-    let mut bucket: Vec<Vec<&i32>> = vec![vec![];nums.len()];
-
+    let mut bucket: Vec<Vec<&i32>> = vec![vec![];nums.len()+1];
     for (key, count) in freq {
         bucket[count].push(key);
     }

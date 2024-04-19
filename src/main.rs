@@ -3,6 +3,7 @@ mod duplicates;
 mod anagram;
 mod twosum;
 mod groupanagram;
+mod topkelements;
 #[derive(Debug)]
 struct Items {
     count: i32,
@@ -30,6 +31,9 @@ fn main() {
     let input = vec![String::from("eat"),String::from("tea"),String::from("tan"),String::from("ate"),String::from("nat"),String::from("bat")];
     let result = groupanagram::group_anagrams(input);
     println!("{:?}",result);
+
+    let result = topkelements::top_k_frequent(vec![1], 2);
+    println!("{:?}", result);
    
 }
 
