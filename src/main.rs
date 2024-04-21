@@ -4,6 +4,7 @@ mod anagram;
 mod twosum;
 mod groupanagram;
 mod topkelements;
+mod productofarrayexceptself;
 #[derive(Debug)]
 struct Items {
     count: i32,
@@ -34,6 +35,9 @@ fn main() {
 
     let result = topkelements::top_k_frequent(vec![1], 2);
     println!("{:?}", result);
+    
+    let result = productofarrayexceptself::product_except_self([1,2,3,4].to_vec());
+    println!("{:?}",result);
    
 }
 
